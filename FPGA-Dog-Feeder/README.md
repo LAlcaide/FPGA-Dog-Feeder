@@ -1,6 +1,18 @@
-# FPGA-Based Food and Water Dispensing System
+# FPGA-Based Food and Water Dispensing System for Dog Shelters
+
+Verilog HDL | Intel Cyclone II FPGA | ModelSim Verification
 
 An FPGA-based automated food and water dispensing system implemented in **Verilog HDL** with **simulation-based verification using ModelSim**.
+
+---
+
+## Project Highlights
+
+- Designed **9 modular RTL modules** in Verilog HDL
+- Developed **independent ModelSim testbenches** for every RTL module
+- Implemented hierarchical FPGA architecture with FSM-based controllers
+- Integrated RFID identification, load-cell monitoring, and motor control
+- Verified the complete top-level system prior to FPGA deployment
 
 ---
 
@@ -14,15 +26,23 @@ The hardware controller is implemented in Verilog HDL and deployed on an **Alter
 
 ## Features
 
+### Feeding System
 - RFID-based dog identification
 - Automatic food dispensing
-- Automatic water dispensing
-- Load cell monitoring of food and water bowls
-- Feeding cooldown mechanism to prevent repeated feeding
+- Feeding cooldown mechanism
 - Daily feeding reset
+
+### Water System
+- Automatic water dispensing
+- Water level monitoring
+
+### Monitoring
 - IoT monitoring through Google Sheets
+
+### FPGA Design
 - Modular Verilog HDL architecture
-- Simulation-based verification using ModelSim
+- Hierarchical RTL design
+- Functional verification using ModelSim
 
 ---
 
@@ -33,6 +53,8 @@ The hardware controller is implemented in Verilog HDL and deployed on an **Alter
 ---
 
 ## RTL Module Hierarchy
+
+The project consists of **9 synchronous RTL modules** organized hierarchically.
 
 ```
 FPGA_Dog_Feeder (Top Module)
@@ -65,23 +87,23 @@ FPGA_Dog_Feeder (Top Module)
 
 ## Verification
 
-Each RTL module is independently verified using dedicated ModelSim testbenches before system integration.
+The design follows a module-by-module verification methodology.
 
-Current verification includes:
+Each RTL module has an independent ModelSim testbench to verify its functionality before system integration.
 
-| Module | Status |
-|---------|--------|
-| cooldown_timer | ✅ Verified |
-| dog_cooldown_controller | ✅ Verified |
-| rfid_controller | ✅ Verified |
-| feeding_controller | ✅ Verified |
-| food_controller | ✅ Verified |
-| water_controller | ✅ Verified |
-| loadcell_controller | ✅ Verified |
-| day_reset_controller | ✅ Verified |
-| Top-Level System | ✅ Verified |
+| RTL Module | Testbench | Status |
+|------------|-----------|--------|
+| cooldown_timer | cooldown_timer_tb | ✅ |
+| dog_cooldown_controller | dog_cooldown_controller_tb | ✅ |
+| rfid_controller | rfid_controller_tb | ✅ |
+| loadcell_controller | loadcell_controller_tb | ✅ |
+| water_controller | water_controller_tb | ✅ |
+| food_controller | food_controller_tb | ✅ |
+| feeding_controller | feeding_controller_tb | ✅ |
+| day_reset_controller | day_reset_controller_tb | ✅ |
+| FPGA_Dog_Feeder | FPGA_Dog_Feeder_tb | ✅ |
 
-Simulation waveforms are available in the **waveforms/** directory.
+Representative simulation waveforms for each module are available in the **waveforms/** directory.
 
 ---
 
@@ -108,21 +130,38 @@ FPGA-Dog-Feeder/
 
 ---
 
-## Future Improvements
+## Results
 
-- Hardware validation on FPGA
-- Improve IoT monitoring dashboard
-- Implement configurable feeding schedules
-- Add watchdog and fault detection logic
-- Migrate design to AMD/Xilinx FPGA platform
+The complete system was successfully:
+
+- Simulated using ModelSim
+- Verified through module-level and top-level integration testbenches
+- Synthesized using Intel Quartus Prime
+- Implemented on an Intel Cyclone II FPGA
+
+---
+
+## Skills Demonstrated
+
+- Verilog HDL
+- RTL Design
+- Finite State Machine (FSM) Design
+- Hierarchical FPGA Design
+- Functional Verification
+- ModelSim Simulation
+- Intel Quartus Prime
+- Hardware Debugging
+- Embedded Systems Integration
 
 ---
 
 ## Repository Status
 
-🚧 **Active Development**
+## Project Status
 
-This repository is continuously updated as additional modules are implemented, verified, and integrated into the complete FPGA-based dispensing system.
+✅ Complete
+
+The FPGA hardware and RTL design have been implemented, verified through dedicated ModelSim testbenches, and organized as a portfolio project demonstrating modular FPGA development and functional verification.
 
 ---
 
