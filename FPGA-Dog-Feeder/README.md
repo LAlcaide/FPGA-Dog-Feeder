@@ -130,6 +130,20 @@ FPGA-Dog-Feeder/
 
 ---
 
+## FPGA Implementation Summary
+
+- Target Device: Intel Cyclone IV EP4CE6E22C6
+- Synthesis: Successful
+- FPGA Compilation: Successful
+- Logic Utilization: 604 / 6,272 Logic Elements (10%)
+- Registers: 344
+- I/O Pins: 33 / 92 (36%)
+- Embedded Memory: 0 bits
+- DSP Blocks: 0
+- PLLs: 0
+
+---
+
 ## Results
 
 The complete system was successfully:
