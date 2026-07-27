@@ -19,17 +19,12 @@ module dog_cooldown_controller_tb;
     end
 
     initial begin
-
-        //------------------------------------------------
         // Test Case 1 : Initial State
-        //------------------------------------------------
         dogstart = 3'b000;
 
         repeat (2) @(posedge clk);
-
-        //------------------------------------------------
+        
         // Test Case 2 : Start Dog 0 Cooldown
-        //------------------------------------------------
         dogstart = 3'b001;
 
         @(posedge clk);
@@ -37,9 +32,7 @@ module dog_cooldown_controller_tb;
 
         repeat (15) @(posedge clk);
 
-        //------------------------------------------------
         // Test Case 3 : Start Dog 1 Cooldown
-        //------------------------------------------------
         dogstart = 3'b010;
 
         @(posedge clk);
@@ -47,9 +40,7 @@ module dog_cooldown_controller_tb;
 
         repeat (15) @(posedge clk);
 
-        //------------------------------------------------
         // Test Case 4 : Start Dog 2 Cooldown
-        //------------------------------------------------
         dogstart = 3'b100;
 
         @(posedge clk);
@@ -57,9 +48,7 @@ module dog_cooldown_controller_tb;
 
         repeat (15) @(posedge clk);
 
-        //------------------------------------------------
         // Test Case 5 : Start All Dogs Simultaneously
-        //------------------------------------------------
         dogstart = 3'b111;
 
         @(posedge clk);
@@ -67,9 +56,7 @@ module dog_cooldown_controller_tb;
 
         repeat (40) @(posedge clk);
 
-        //------------------------------------------------
         // End Simulation
-        //------------------------------------------------
         $stop;
 
     end
