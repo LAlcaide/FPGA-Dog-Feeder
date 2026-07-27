@@ -76,7 +76,7 @@ Current verification includes:
 | rfid_controller | ✅ Verified |
 | feeding_controller | ✅ Verified |
 | food_controller | 🚧 Planned |
-| water_controller | 🚧 Planned |
+| water_controller | ✅ Verified |
 | loadcell_controller | ✅ Verified |
 | day_reset_controller | 🚧 Planned |
 | Top-Level System | 🚧 Planned |
