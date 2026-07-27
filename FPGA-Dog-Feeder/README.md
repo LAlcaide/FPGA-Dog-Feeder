@@ -112,10 +112,11 @@ Representative simulation waveforms for each module are available in the **wavef
 ```
 FPGA-Dog-Feeder/
 │
-├── rtl/               # Verilog HDL source files
-├── tb/                # ModelSim testbenches
-├── waveforms/         # Simulation waveform screenshots
-├── docs/              # Project documentation
+├── rtl/                  # Verilog HDL source files
+├── tb/                   # ModelSim testbenches
+├── waveforms/            # Simulation waveform screenshots
+├── docs/                 # Project documentation
+├── FPGA_Dog_Feeder.sdc   # Timing constraints
 └── README.md
 ```
 
