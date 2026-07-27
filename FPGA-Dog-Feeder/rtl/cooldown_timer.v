@@ -6,8 +6,8 @@ module cooldown_timer(clk, dogstart, cooldown_done);
 	reg [15:0] cooldown;
 	reg [31:0] drescntr;
 	
-	localparam ONE_SECOND = 32'd10;
-	localparam DOG_COOLDOWN_TIME = 16'd5;
+	localparam ONE_SECOND        = 32'd50000000;
+	localparam DOG_COOLDOWN_TIME = 16'd28800;
 	
 	initial begin
 		//COUNTERS 
