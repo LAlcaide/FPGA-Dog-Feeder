@@ -75,7 +75,7 @@ Current verification includes:
 | dog_cooldown_controller | ✅ Verified |
 | rfid_controller | ✅ Verified |
 | feeding_controller | ✅ Verified |
-| food_controller | 🚧 Planned |
+| food_controller | ✅ Verified |
 | water_controller | ✅ Verified |
 | loadcell_controller | ✅ Verified |
 | day_reset_controller | 🚧 Planned |
