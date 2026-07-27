@@ -22,7 +22,7 @@ module cooldown_timer(clk, dogstart, cooldown_done);
 		//DOG RESET
 		if(cooldown != 0) begin
 			drescntr<=drescntr+1;
-			if(drescntr>=ONE_SECOND) begin
+			if(drescntr>=ONE_SECOND - 1) begin
 				cooldown<=cooldown-1; 
 				drescntr<=0;
 			end
