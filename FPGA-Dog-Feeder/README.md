@@ -78,7 +78,7 @@ Current verification includes:
 | food_controller | ✅ Verified |
 | water_controller | ✅ Verified |
 | loadcell_controller | ✅ Verified |
-| day_reset_controller | 🚧 Planned |
+| day_reset_controller | ✅ Verified |
 | Top-Level System | 🚧 Planned |
 
 Simulation waveforms are available in the **waveforms/** directory.
