@@ -24,28 +24,28 @@ module loadcell_controller(clk, loadcell, cloadcell, wloadcell, wcloadcell, load
 	
 		//FOOD COMPARTMENT LOADCELL
 		cloadcelldel<=cloadcelldel+1;
-		if(cloadcelldel>=ONE_SECOND) begin
+		if(cloadcelldel>=ONE_SECOND-1) begin
 			cloadcellreg<=cloadcell;
 			cloadcelldel<=0;
 		end
 	
 		//FOOD LOADCELL
 		loadcelldel<=loadcelldel+1;
-		if(loadcelldel>=LOADCELL_SAMPLE_PERIOD) begin
+		if(loadcelldel>=LOADCELL_SAMPLE_PERIOD-1) begin
 			loadcellreg<=loadcell;
 			loadcelldel<=0;
 		end
 		
 		//WATER LOADCELL
 		wloadcelldel<=wloadcelldel+1;
-		if(wloadcelldel>=ONE_SECOND) begin
+		if(wloadcelldel>=ONE_SECOND-1) begin
 			wloadcellreg<=wloadcell;
 			wloadcelldel<=0;
 		end
 		
 		//WATER COMPARTMENT LOADCELL
 		wcloadcelldel<=wcloadcelldel+1;
-		if(wcloadcelldel>=ONE_SECOND) begin
+		if(wcloadcelldel>=ONE_SECOND-1) begin
 			wcloadcellreg<=wcloadcell;
 			wcloadcelldel<=0;
 		end
