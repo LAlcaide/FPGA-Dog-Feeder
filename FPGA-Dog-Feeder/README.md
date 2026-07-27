@@ -79,7 +79,7 @@ Current verification includes:
 | water_controller | ✅ Verified |
 | loadcell_controller | ✅ Verified |
 | day_reset_controller | ✅ Verified |
-| Top-Level System | 🚧 Planned |
+| Top-Level System | ✅ Verified |
 
 Simulation waveforms are available in the **waveforms/** directory.
 
@@ -110,7 +110,6 @@ FPGA-Dog-Feeder/
 
 ## Future Improvements
 
-- Complete verification of all RTL modules
 - Hardware validation on FPGA
 - Improve IoT monitoring dashboard
 - Implement configurable feeding schedules
