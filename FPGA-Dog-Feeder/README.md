@@ -136,12 +136,12 @@ The design was successfully synthesized, placed-and-routed, and analyzed using I
 
 | Item | Result |
 |------|--------|
-| Target FPGA | Intel Cyclone IV EP4CE6E22C6 |
+| Target Device   | Intel Cyclone IV EP4CE6E22C6 |
 | Compilation | ✅ Successful |
 | Static Timing Analysis | ✅ Successful |
 | Target Clock | 50 MHz |
 | Maximum Operating Frequency (Fmax) | 142.82 MHz |
-| Logic Elements | 604 / 6,272 (10%) |
+| Logic Elements | 599 / 6,272 (10%) |
 | Registers | 344 |
 | I/O Pins | 33 / 92 (36%) |
 
