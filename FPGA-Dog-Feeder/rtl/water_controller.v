@@ -35,7 +35,7 @@ module water_controller(clk, wdismotor,wloadcellreg);
 			end
 			WATER_OPEN_VALVE: begin
 				wdismotor<=4'b0101;
-				if(wdiscntr>=ONE_SECOND) begin
+				if(wdiscntr>=ONE_SECOND-1) begin
 					water_state<=WATER_WAIT_FLOW;
 					wdiscntr<=0;
 				end
@@ -53,7 +53,7 @@ module water_controller(clk, wdismotor,wloadcellreg);
 			end
 			WATER_CLOSE_VALVE: begin
 				wdismotor<=4'b1010;
-				if(wdiscntr>=ONE_SECOND) begin
+				if(wdiscntr>=ONE_SECOND-1) begin
 					wdiscntr<=0;  
 					water_state<=WATER_IDLE;
 				end
