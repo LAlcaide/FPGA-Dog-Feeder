@@ -73,7 +73,7 @@ Current verification includes:
 |---------|--------|
 | cooldown_timer | ✅ Verified |
 | dog_cooldown_controller | ✅ Verified |
-| rfid_controller | 🚧 Planned |
+| rfid_controller | ✅ Verified |
 | feeding_controller | 🚧 Planned |
 | food_controller | 🚧 Planned |
 | water_controller | 🚧 Planned |
