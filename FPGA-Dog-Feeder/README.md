@@ -74,10 +74,10 @@ Current verification includes:
 | cooldown_timer | ✅ Verified |
 | dog_cooldown_controller | ✅ Verified |
 | rfid_controller | ✅ Verified |
-| feeding_controller | ✅ Verified |
+| feeding_controller | 🚧 Planned |
 | food_controller | 🚧 Planned |
 | water_controller | 🚧 Planned |
-| loadcell_controller | 🚧 Planned |
+| loadcell_controller | ✅ Verified |
 | day_reset_controller | 🚧 Planned |
 | Top-Level System | 🚧 Planned |
 
