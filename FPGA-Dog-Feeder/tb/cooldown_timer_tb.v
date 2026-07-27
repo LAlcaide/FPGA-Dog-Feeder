@@ -17,22 +17,20 @@ module cooldown_timer_tb;
         clk = 0;
         forever #10 clk = ~clk;
     end
-
-    // Test stimulus
+    
     initial begin
         // Initialize inputs
         dogstart = 0;
-
-        // Wait 100 ns
-        #110;
+        
+        repeat (5) @(posedge clk);
 
         // Start cooldown
         dogstart = 1;
-        #20;
+        @(posedge clk);
         dogstart = 0;
 
         // Wait long enough to observe behavior
-        #1500;
+        repeat (80) @(posedge clk);
 
         // Finish simulation
         $stop;
