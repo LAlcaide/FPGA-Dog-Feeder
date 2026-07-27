@@ -8,8 +8,7 @@ module day_reset_controller(clk, reset, resetFoodLog);
 	localparam ONE_SECOND = 32'd50000000;
 
 	initial begin
-		//COUNTERS 
-		{resetdel}<=0;
+		{resetdel, resetFoodLog}<=0;
 	end
 
 	always @(posedge clk) begin
@@ -17,7 +16,7 @@ module day_reset_controller(clk, reset, resetFoodLog);
 		//DAY RESET TRIGGERED BY ESP
 		if(reset) begin
 			resetdel<=resetdel+1;
-			if(resetdel>ONE_SECOND*3) begin
+			if(resetdel>(ONE_SECOND-1)*3) begin
 				resetFoodLog<=1;  
 				resetdel<=0;  
 			end
