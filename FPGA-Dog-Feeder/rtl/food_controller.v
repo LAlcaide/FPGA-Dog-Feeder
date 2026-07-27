@@ -61,10 +61,14 @@ module food_controller(clk, fdismotor, rfidreg, eatenreg, loadcellreg, loadcell,
 					fdiscntr<=0;
 					food_state<=FOOD_OPEN_GATE;	
 				end
+				else if(((rfidreg==2'b01 && eatenreg[0]==0)|| (rfidreg==2'b10 && eatenreg[1]==0) || (rfidreg==2'b11 && eatenreg[2]==0))&& loadcellreg==3) begin
+				  fdiscntr<=0;
+					food_state<=FOOD_WAIT_EAT;	
+				end
 			end
 			FOOD_OPEN_GATE: begin
 				fdismotor<=4'b1001;
-				if(fdiscntr>=ONE_SECOND) begin
+				if(fdiscntr>=ONE_SECOND-1) begin
 					food_state<=FOOD_SETTLE;
 					fdiscntr<=0;
 				end
@@ -82,7 +86,7 @@ module food_controller(clk, fdismotor, rfidreg, eatenreg, loadcellreg, loadcell,
 			end
 			FOOD_CLOSE_GATE: begin
 				fdismotor<=4'b0110;
-				if(fdiscntr>=ONE_SECOND) begin
+				if(fdiscntr>=ONE_SECOND-1) begin
 					food_state<=FOOD_WAIT_EAT;
 					fdiscntr<=0;
 				end
@@ -135,6 +139,9 @@ module food_controller(clk, fdismotor, rfidreg, eatenreg, loadcellreg, loadcell,
 			if(!cooldown_done_prev[i] && cooldown_done[i])
 				eatenreg[i]<=0;
 		end
+		
+		if(resetFoodLog == 1)
+		  eatenreg <= 0;
 		
 	end
 endmodule
