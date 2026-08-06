@@ -1,3 +1,4 @@
+`default_nettype none
 module feeding_controller(clk, fdismotor, rfidreg, eatenreg, loadcell, cloadcell, clearrfiddone, clearrfidreq, resetFoodLog, wloadcell, wcloadcell, wdismotor, loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg);
 	input clk, clearrfiddone, resetFoodLog;
 	input [1:0] rfidreg, loadcell, cloadcell, wloadcell, wcloadcell;
