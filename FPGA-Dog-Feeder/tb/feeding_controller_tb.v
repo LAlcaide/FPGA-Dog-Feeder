@@ -71,21 +71,27 @@ module feeding_controller_tb;
         // Test Case 3: Trigger Food Dispense
         rfidreg = 2'b01;
 
-        repeat (35) @(posedge clk);
+        repeat (10) @(posedge clk);
+        
+        loadcell   = 2'b11;
+        wloadcell  = 2'b11;
+        
+         repeat (10) @(posedge clk);
 
         // Simulate dog eating
         loadcell = 2'b01;
 
-        repeat (15) @(posedge clk);
+        repeat (3) @(posedge clk);
 
         // Acknowledge RFID clear request
         clearrfiddone = 1;
+        rfidreg = 2'b0;
 
         repeat (2) @(posedge clk);
 
         clearrfiddone = 0;
 
-        repeat (10) @(posedge clk);
+        repeat (3) @(posedge clk);
 
         // Test Case 4: Trigger Water Dispense
         wloadcell = 2'b00;
@@ -95,7 +101,7 @@ module feeding_controller_tb;
         // Simulate full water bowl
         wloadcell = 2'b11;
 
-        repeat (120) @(posedge clk);
+        repeat (10) @(posedge clk);
 
         // Test Case 5: Reset Food Log
         resetFoodLog = 1;
@@ -112,3 +118,4 @@ module feeding_controller_tb;
     end
 
 endmodule
+
