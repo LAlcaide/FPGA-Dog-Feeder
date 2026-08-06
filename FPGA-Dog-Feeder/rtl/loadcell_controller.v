@@ -1,3 +1,4 @@
+`default_nettype none
 module loadcell_controller(clk, loadcell, cloadcell, wloadcell, wcloadcell, loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg);
 	input clk;
 	input [1:0] loadcell, cloadcell, wloadcell, wcloadcell;
