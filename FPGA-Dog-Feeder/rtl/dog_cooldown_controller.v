@@ -1,3 +1,4 @@
+`default_nettype none
 module dog_cooldown_controller(clk, dogstart, cooldown_done);
 	input clk;
 	input [2:0] dogstart;
