@@ -24,6 +24,7 @@ module day_reset_controller(clk, reset, resetFoodLog);
 			if(resetdel>(ONE_SECOND-1)*3) begin
 				resetFoodLog<=1;  
 				fired<=1;  
+				resetdel<= 0;
 			end
 			else
 				resetdel<=resetdel+1;
