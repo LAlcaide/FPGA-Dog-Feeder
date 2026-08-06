@@ -1,3 +1,4 @@
+`default_nettype none
 module cooldown_timer(clk, dogstart, cooldown_done);
 	input clk, dogstart;
 	
