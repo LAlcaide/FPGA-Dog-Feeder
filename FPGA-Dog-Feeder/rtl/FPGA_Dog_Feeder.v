@@ -4,11 +4,11 @@ module FPGA_Dog_Feeder(clk, reset, dispense, loadcell, wloadcell, wdispense, eat
 input wire clk, reset;
 input wire [1:0] wloadcell, loadcell, wcloadcell, cloadcell, rfid;
 //DOG EATEN
-output [2:0] eaten;
+output reg [2:0] eaten;
 //MOTORS
-output [3:0] dispense, wdispense;
+output reg [3:0] dispense, wdispense;
 //LOAD CELLS
-output [1:0] rfidout, wloadcellout, loadcellout, wcloadcellout, cloadcellout;
+output reg [1:0] rfidout, wloadcellout, loadcellout, wcloadcellout, cloadcellout;
 
 //COUNTERS
 reg [31:0] resetdel;
