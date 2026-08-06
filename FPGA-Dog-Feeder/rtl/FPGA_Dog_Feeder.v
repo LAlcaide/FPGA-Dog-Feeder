@@ -32,7 +32,7 @@ rfid_controller RFID_INST(
 feeding_controller FEEDING_INST(
 	.clk(clk),
 	.fdismotor(dispense),
-	.rfidreg(rfidregout),
+	.rfidreg(rfidout),
 	.eatenreg(eaten),
 	.loadcell(loadcell), 
 	.cloadcell(cloadcell),
