@@ -107,6 +107,20 @@ Representative simulation waveforms for each module are available in the **wavef
 
 ---
 
+## Representative Simulation Results
+
+The RTL design was verified using dedicated ModelSim testbenches prior to system integration. Below are representative simulation waveforms demonstrating module-level and top-level verification.
+
+| Module | Waveform |
+|---------|----------|
+| Cooldown Timer | ![](waveforms/cooldown_timer_waveform.png) |
+| RFID Controller | ![](waveforms/rfid_controller_waveform.png) |
+| Food Controller | ![](waveforms/food_controller_waveform.png) |
+| Top-Level Integration | ![](waveforms/FPGA_Dog_Feeder_waveform.png) |
+
+Additional simulation waveforms for every RTL module are available in the **waveforms/** directory.
+---
+
 ## Project Structure
 
 ```
