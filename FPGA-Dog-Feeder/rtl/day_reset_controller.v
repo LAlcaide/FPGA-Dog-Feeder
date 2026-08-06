@@ -14,7 +14,7 @@ module day_reset_controller(clk, reset, resetFoodLog);
 	always @(posedge clk) begin
 		//DAY RESET CONTROLLER
 		//DAY RESET TRIGGERED BY ESP
-		if(reset) begin
+		if(reset && !resetFoodLog) begin
 			resetdel<=resetdel+1;
 			if(resetdel>(ONE_SECOND-1)*3) begin
 				resetFoodLog<=1;  
