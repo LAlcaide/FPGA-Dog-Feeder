@@ -13,7 +13,7 @@ module feeding_controller(clk, fdismotor, rfidreg, eatenreg, loadcell, cloadcell
 		.clk(clk), 
 		.fdismotor(fdismotor), 
 		.rfidreg(rfidreg), 
-		.eatenreg(eatenreg_internal), 
+		.eatenreg(eatenreg), 
 		.loadcellreg(loadcellreg),  
 		.loadcell(loadcell),  
 		.clearrfiddone(clearrfiddone), 
