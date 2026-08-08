@@ -1,15 +1,11 @@
 `default_nettype none
-module FPGA_Dog_Feeder(clk, reset, dispense, loadcell, wloadcell, wdispense, eaten, rfidout, wloadcellout, loadcellout, wcloadcell, cloadcell, wcloadcellout, cloadcellout, rfid);
-//PORTS
-input wire clk, reset;
-input wire [1:0] wloadcell, loadcell, wcloadcell, cloadcell, rfid;
-//DOG EATEN
-output wire [2:0] eaten;
-//MOTORS
-output wire [3:0] dispense, wdispense;
-//LOAD CELLS
-output wire [1:0] rfidout, wloadcellout, loadcellout, wcloadcellout, cloadcellout;
-
+module FPGA_Dog_Feeder(
+input wire clk, reset,
+input wire [1:0] wloadcell, loadcell, wcloadcell, cloadcell, rfid,
+output wire [2:0] eaten,
+output wire [3:0] dispense, wdispense,
+output wire [1:0] rfidout, wloadcellout, loadcellout, wcloadcellout, cloadcellout
+);
 //COUNTERS
 reg [31:0] resetdel;
 
