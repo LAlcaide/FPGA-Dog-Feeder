@@ -3,7 +3,8 @@ module rfid_controller (
 input wire clk, clearrfidreq, 
 input wire [1:0] rfid, 
 output reg [1:0] rfidreg, 
-output reg clearrfiddone);
+output reg clearrfiddone
+);
 	initial begin
 		//RFID
 		rfidreg<=0;
