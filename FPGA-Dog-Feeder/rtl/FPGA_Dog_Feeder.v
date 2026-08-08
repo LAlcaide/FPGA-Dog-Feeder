@@ -19,9 +19,9 @@ localparam ONE_SECOND = 32'd50000000;
 
 rfid_controller RFID_INST(
 	.clk(clk),
+	.clearrfidreq(clearrfidreq),
 	.rfid(rfid),        
 	.rfidreg(rfidout),
-	.clearrfidreq(clearrfidreq),
 	.clearrfiddone(clearrfiddone)
 );
 
