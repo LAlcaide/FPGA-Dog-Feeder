@@ -1,10 +1,9 @@
 `default_nettype none
-module loadcell_controller(clk, loadcell, cloadcell, wloadcell, wcloadcell, loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg);
-	input wire clk;
-	input wire [1:0] loadcell, cloadcell, wloadcell, wcloadcell;
-
-	output reg [1:0] loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg;
-	
+module loadcell_controller(
+input wire clk, 
+input wire [1:0] loadcell, cloadcell, wloadcell, wcloadcell, 
+output reg [1:0] loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg
+);	
 	reg [31:0] loadcelldel, wloadcelldel, wcloadcelldel, cloadcelldel;
 	
 	localparam ONE_SECOND = 32'd50000000;
