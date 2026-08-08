@@ -1,7 +1,7 @@
 `default_nettype none
 module loadcell_controller(clk, loadcell, cloadcell, wloadcell, wcloadcell, loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg);
-	input clk;
-	input [1:0] loadcell, cloadcell, wloadcell, wcloadcell;
+	input wire clk;
+	input wire [1:0] loadcell, cloadcell, wloadcell, wcloadcell;
 
 	output reg [1:0] loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg;
 	
