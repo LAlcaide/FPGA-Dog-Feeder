@@ -1,8 +1,8 @@
 `default_nettype none
 module dog_cooldown_controller(clk, dogstart, cooldown_done);
-	input clk;
-	input [2:0] dogstart;
-	output [2:0] cooldown_done;
+	input wire clk;
+	input wire [2:0] dogstart;
+	output wire [2:0] cooldown_done;
 	
 	genvar i;
 	
