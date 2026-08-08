@@ -1,7 +1,7 @@
 `default_nettype none
 module rfid_controller (clk,rfid, clearrfidreq, rfidreg, clearrfiddone);
-	input clk, clearrfidreq;
-	input [1:0] rfid;
+	input wire clk, clearrfidreq;
+	input wire [1:0] rfid;
 	
 	output reg [1:0] rfidreg;
 	output reg clearrfiddone;
