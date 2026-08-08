@@ -1,7 +1,7 @@
 `default_nettype none
 module water_controller(clk, wdismotor,wloadcellreg);
-	input clk;
-	input [1:0] wloadcellreg;
+	input wire clk;
+	input wire [1:0] wloadcellreg;
 	
 	output reg [3:0] wdismotor;
 	
