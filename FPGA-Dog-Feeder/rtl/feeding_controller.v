@@ -24,8 +24,8 @@ output wire [1:0] loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg
 	
 	water_controller WATER_INST(
 		.clk(clk),
-		.wdismotor(wdismotor),
-		.wloadcellreg(wloadcellreg)
+		.wloadcellreg(wloadcellreg),
+		.wdismotor(wdismotor)
 	);
 	
 	loadcell_controller LOADCELL_INST(
