@@ -1,10 +1,9 @@
 `default_nettype none
-module water_controller(clk, wdismotor,wloadcellreg);
-	input wire clk;
-	input wire [1:0] wloadcellreg;
-	
-	output reg [3:0] wdismotor;
-	
+module water_controller(
+input wire clk,
+input wire [1:0] wloadcellreg,
+output reg [3:0] wdismotor
+);	
 	reg [31:0] wdiscntr;
 	
 	localparam ONE_SECOND = 32'd50000000, water_flow_timeout = ONE_SECOND * 10;
