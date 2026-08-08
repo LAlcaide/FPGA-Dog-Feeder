@@ -3,7 +3,6 @@ module cooldown_timer(
  input wire clk, dogstart, 
  output wire cooldown_done
 );
-	
 	reg [15:0] cooldown;
 	reg [31:0] drescntr;
 	
