@@ -1,9 +1,7 @@
 `default_nettype none
-module day_reset_controller(clk, reset, resetFoodLog);
-	input wire clk, reset;
-	
-	output reg resetFoodLog;
-	
+module day_reset_controller(
+input wire clk, reset, 
+output reg resetFoodLog);
 	reg [31:0] resetdel;
 	reg fired;
 	
