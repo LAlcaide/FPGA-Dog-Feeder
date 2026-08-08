@@ -1,8 +1,8 @@
 `default_nettype none
 module cooldown_timer(clk, dogstart, cooldown_done);
-	input clk, dogstart;
+	input wire clk, dogstart;
 	
-	output cooldown_done;
+	output wire cooldown_done;
 	
 	reg [15:0] cooldown;
 	reg [31:0] drescntr;
