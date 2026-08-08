@@ -12,14 +12,14 @@ output wire [1:0] loadcellreg, cloadcellreg, wloadcellreg, wcloadcellreg
 
 	food_controller FOOD_INST(
 		.clk(clk), 
-		.fdismotor(fdismotor), 
+		.clearrfiddone(clearrfiddone), 
+		.resetFoodLog(resetFoodLog),
 		.rfidreg(rfidreg), 
-		.eatenreg(eatenreg), 
 		.loadcellreg(loadcellreg),  
 		.loadcell(loadcell),  
-		.clearrfiddone(clearrfiddone), 
 		.clearrfidreq(clearrfidreq),
-		.resetFoodLog(resetFoodLog)
+		.fdismotor(fdismotor), 
+		.eatenreg(eatenreg)
 	);
 	
 	water_controller WATER_INST(
