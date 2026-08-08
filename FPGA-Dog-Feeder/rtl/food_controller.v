@@ -1,12 +1,11 @@
 `default_nettype none
-module food_controller(clk, fdismotor, rfidreg, eatenreg, loadcellreg, loadcell, clearrfiddone, clearrfidreq,resetFoodLog);
-	input wire clk, clearrfiddone, resetFoodLog;
-	input wire [1:0] rfidreg, loadcellreg, loadcell;
-
-	output reg clearrfidreq;
-	output reg [3:0] fdismotor;
-	output reg [2:0] eatenreg;
-	
+module food_controller(
+input wire clk, clearrfiddone, resetFoodLog,
+input wire [1:0] rfidreg, loadcellreg, loadcell,
+output reg clearrfidreq,
+output reg [3:0] fdismotor,
+output reg [2:0] eatenreg,
+);
 	reg [2:0] dogstart;
 	reg [31:0] fdiscntr;
 	
